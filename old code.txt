@@ -1,0 +1,740 @@
+// let count = true;
+// let p = new Promise((resolve, reject) => {
+//   if (count == true) {
+
+//     resolve("Sucess");
+
+//     reject("Failed");
+//   }
+// });
+
+// p.then((messege) => {
+//   console.log("this is my new name ", messege);
+// }).catch((error) => {
+//   console.log("this is ", error);
+// });
+
+// var data = "intial state";
+// setTimeout(function (da) {
+//   data = "new State";
+//   console.warn("inside timer")
+// }, 2000);
+// console.log(data);
+// var vip = "Hellow World";
+// setTimeout(function () {
+//   vip = "Hellow Developer";
+//   console.log(vip)
+// }, 2000);
+// console.log(vip);
+// var naam = "Usama";
+// setTimeout(function () {
+//   naam = " Khalied";
+//   console.log(naam);
+// }, 2000);
+// console.log(naam);
+// var dash = " Hellow";
+// setTimeout(function () {
+//   dash = "Usama";
+//   console.log(dash);
+// }, 1000);
+// console.log(dash);
+// var Usama = "Kaam ho gaya kiya ? ";
+// setTimeout(function () {
+// Usama = "ya nh";
+// console.log(Usama);
+// }, 2000);
+// console.log(Usama);
+// var data = new Promise(function (resolve, reject) {
+//   setTimeout(function () {
+//     resolve("New State");
+//   }, 2000);
+//  reject("Your update is failed");
+// });
+// data.then(function (val) {
+//   console.log(val + "your update is completed")
+// }).catch((error) => {
+//   console.log(error + "This is failed");
+// });
+// function allFunction() {
+//   setTimeout(function () {
+//      sms();
+//   }, 3000);
+//    mail();
+// };
+// function mail() {
+//   console.log("main function called ");
+// }
+// function sms() {
+//   console.log("sms function called")
+// }
+// allFunction();
+// let sentsms = function () {
+//   return new Promise(function (resolve, reject) {
+//     if (mail()) {
+//       setTimeout(function () {
+//         mail();
+//         resolve();
+//       }, 2000);
+//     }
+//     else {
+//       reject();
+//     }
+//   })
+// }
+// sentsms().then(function () {
+//   mail();
+// }).catch(function () {
+//   sms();
+// })
+// var promise = new Promise(function (resolve, reject) {
+//   const x = "Usama"
+//   const y = "Usama";
+//   if (x === y) {
+//     resolve();
+//   }
+//   else {
+//     reject();
+//   }
+// })
+
+// promise.then(function () {
+//   console.log("Success you are passed the logic");
+// })
+//   .catch(function () {
+//     console.log("you are failed the cross line")
+//   })
+//
+// let data = 1;
+// console.log(data + "1");
+// setTimeout(function () {
+//   console.log(data + "Second")
+// }, 2000)
+
+// data = 3;
+// console.log(data + "Last");
+// let data = new Promise((resolve, reject) => {
+//   setTimeout(() => {
+//     reject("some issues ");
+//   }, 2000)
+// })
+// data.then((data) => {
+//   console.log(data)
+// })
+//   .catch((error) => {
+//     console.log("catch block", error)
+//   });
+// let data = fetch("http://dummy.restapiexample.com/api/v1/employees");
+// data.then((aray) => {
+//   return aray.json();
+
+// }).then((result) => {
+//   console.log("second output", result)
+// });
+
+
+// let data = new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//         resolve();
+//     }, 1000)
+//     setTimeout(() => {
+//         reject();
+//     }, 2000)
+
+// })
+// data.then((result) => {
+//     console.log("It is working")
+// }).catch((erro) => {
+//     console.log("Error failed")
+// })
+// data.finally((result) => {
+//     console.log("fianl")
+// })
+
+
+
+
+// let data = new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//         resolve(10);
+//     })
+// })
+// data.then((data) => {
+//     console.log(data);
+//     return data * 10
+// }).then((result) => {
+//     // return result * 10
+//     console.log(result);
+//     return result * 5;
+// }).then((result1) => {
+//     console.log(result1);
+//     return result1 * 5
+// }).then((result2) => {
+//     console.log(result2);
+// })
+
+
+
+
+
+
+
+
+
+// let data = new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//         reject(new Error("Data Issue"));
+//         throw new Error("data Issue");
+//         resolve("done");
+//     }, 2000);
+
+// });
+// data.finally((item) => {
+//     console.warn(item);
+// })
+// let ball = document.getElementById('ball');
+// let data = Promise.all([
+//     new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             console.warn("7 seconds")
+//             ball.style.transform = "rotate(80deg)";
+//         }, 7000)
+//     }),
+//     new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             console.warn("6 seconds")
+//             ball.style.transform = "rotate(0deg)";
+//             ball.style.backgroundColor = "green";
+//         }, 6000)
+//     }),
+//     new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             console.warn("5 seconds");
+//             ball.style.transform = "rotate(80deg)";
+//             ball.style.backgroundColor = "red";
+//         }, 5000)
+//     }),
+//     new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             console.warn("4 seconds");
+//             ball.style.transform = "rotate(0deg)";
+//             ball.style.backgroundColor = "green";
+//         }, 4000)
+//     }),
+//     new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             console.warn("3 seconds");
+//             ball.style.transform = "rotate(80deg)";
+//             ball.style.backgroundColor = "red";
+//         }, 3000)
+//     }),
+//     new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             console.warn("2 seconds");
+//             ball.style.transform = "rotate(0deg)";
+//             ball.style.backgroundColor = "green";
+//         }, 2000)
+//     }),
+//     new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             console.warn("1 seconds")
+//             ball.style.transform = "rotate(80deg)";
+//         }, 1000)
+//     }),
+// ])
+// data.then((item) => {
+//     console.warn("1st" + item);
+//     throw new Error("Error hai merey bhai ")
+// }).catch((err) => {
+//     console.warn(err);
+// })
+// let ball = document.getElementById('ball');
+// let data = Promise.allSettled([
+//     new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             resolve("Hellow");
+//         }, 7000)
+//     }),
+//     new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             resolve("My")
+//         }, 6000)
+//     }),
+//     new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             resolve("Name");
+//         }, 5000)
+//     }),
+//     new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             resolve("Is");
+//         }, 4000)
+//     }),
+//     new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             reject("Usama")
+//         }, 3000)
+//     }),
+//     new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             resolve("Khalied")
+//         }, 2000)
+//     }),
+//     new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             reject("Mehmood");
+//         }, 1000)
+//     }),
+// ])
+// data.then((item) => {
+//     console.log(item);
+// }).catch((error) => {
+//     console.log(error + "This is an error");
+// })
+// let ball = document.getElementById('ball');
+// let data = Promise.allSettled([
+//     new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             resolve("Hi")
+//         }, 2000)
+//     }),
+//     new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             reject("Hi")
+//         }, 2000)
+//     }),
+//     new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             resolve("Hi")
+//         }, 2000)
+//     })
+// ])
+// data.then((item) => {
+//     console.log(item);
+// }).catch((err) => {
+//     console.log(err + "This is error")
+// })
+// let a = {
+//     "name": "Usama",
+//     "Father Name": "Khalied Mehmood"
+// }
+// let myString = "This is my first string and how to about  name is khalied  Mehmood and my father name is khalied mehmood this sis for you andwhat tha fuck and about the name bilal shiekh and bilal Usama Anus Uzaier khalied Tayyaba madam anf manoor madam"
+// let c = [
+//     "Don"
+// ]
+// let b = [
+//     "Hellow",
+//     "My name",
+//     "Is",
+//     "Khalied",
+//     "Mehmood",
+//     "Anus"
+// ]
+// b.forEach(myfun);
+// function myfun(e) {
+//     console.log(b)
+// }
+// for (let i = 0; i < 3; i++) {
+//     console.log(i - 1)
+// }
+// var numbers = [10, 3, 4, 5, 3];
+// for (let i = 0; i < numbers.length; i++) {
+//     console.log(numbers[i])
+// }
+// var elements = document.querySelectorAll("h2");
+// for (var i = 0; i < elements.length; i++) {
+//     elements[i].style.color = "red";
+// }
+
+// var doosra = document.querySelectorAll("p");
+// for (let i = 0; i < doosra.length; i++) {
+//     doosra[i].style.color = "pink"
+// }
+// let heading = document.querySelectorAll("h2");
+// for (let i = 0; i < heading.length; i++) {
+//     heading[i].style.color = "blue";
+// }
+// let head = document.querySelectorAll("p");
+// for (let i = 0; i < head.length; i++) {
+//     head[i].style.color = "red";
+// }
+// var person = {
+//     name: "Usama",
+//     email: "Kahlied Mehmood",
+//     age: 24,
+// }
+// let data = {
+//     id: 1,
+//     age: 34,
+//     Qualification: "B.A Pass",
+//     doosra: "aagey wala"
+// }
+// for (let item in data) {
+//     document.writeln(item + " : " + data[item] + "<br/>")
+// }
+// for (let object in person) {
+//     document.writeln(object + " : " + person[object] + "<br/>")
+// }
+
+// var json = {
+//     jsonData: {
+//         one: [11, 12, 13, 14, 15],
+//         two: [21, 22, 23],
+//         three: [31, 32]
+//     }
+// };
+
+
+// ==========  Javascript Object ===========//
+// let person = {
+//     "firstname": "Yahoo",
+//     "lastname": ".com"
+// }
+
+// console.log(person.firstname + " " + person.lastname)
+// ============ Json =====================//
+
+// let person1 = {
+//     "firstname": "yahoo",
+//     "lastname": ".com"
+// }
+// console.log(person1.firstname + " " + person1.lastname)
+
+// ============ Data types Allowed in json ===========//
+
+// let dataTypes = {
+//     "name": "Yahoo",
+//     "age": "24",
+//     "marrried": true,
+//     "kids": null,
+//     "array": ["music", "Sports"],
+//     "data": [
+//         { "id": 1, "num": "string" },
+//         { "id2": "this", "num": "string" }
+//     ],
+//     "data2": [
+//         {
+//             "othertype": [
+//                 {
+//                     "First": "myname"
+//                 },
+//                 {
+//                     "algebric": "numeric"
+//                 }
+//             ]
+//         }
+//     ]
+// }
+// console.log(dataTypes.data[0]);
+// console.log(dataTypes.data2[0].othertype[1]);
+
+// let araayCondtion2 = {
+//     "name": [
+//         {
+//             "origionalname": "usama-khalied",
+//             "email": "usamakhalied@gmail.com"
+//         },
+//         {
+//             "localname": "Nakku",
+//             "nickname": "Zaidii"
+//         },
+//     ],
+//     "personalInfo": "No",
+//     "personalRealInfor": [
+//         {
+//             "Myhobby": "Editting",
+//             "Myhobby": "Adventure Life"
+//         },
+//         {
+//             "Engaged": "Single",
+//             "RelationShip": "Its complicated"
+//         },
+
+//     ],
+//     "Vechile": "Bike"
+// }
+// let count = 0;
+// let value = document.getElementById('value');
+// // console.log(count)
+// const btns = document.querySelectorAll('.btn');
+// btns.forEach(function (btn) {
+//     btn.addEventListener('click', function (e) {
+//         const styles = e.currentTarget.classList;
+//         // console.log(styles
+//         if (styles.contains("increase")) {
+//             count++;
+//             console.log("It is working")
+//         };
+//     })
+// });
+// let count = 0;
+// let value = document.getElementById('value');
+// const btns = document.querySelectorAll('.btn');
+// btns.forEach(function (btn) {
+//     btn.addEventListener('click', function (e) {
+//         const styles = e.currentTarget.classList;
+//         if (styles.contains("increase")) {
+//             count++;
+//         }
+//         else if (styles.contains("decrease")) {
+//             count--;
+//         }
+//         else {
+//             count = 0;
+//         }
+//         value.textContent = count
+//     })
+// })
+// var elements = document.querySelectorAll("h1");
+// for (var i = 0; i < elements.length; i++) {
+//     elements[i].style.color = "red";
+// }
+// var json = {
+//     jsonData: {
+//         one: [11, 12, 13, 14, 15],
+//         two: [21, 22, 23],
+//         three: [31, 32]
+//     }
+// };
+// console.log(json.jsonData.one)
+// var Obkect = {
+//     obb: {
+//         one: [12, 2, 3, 4],
+//         twwo: ["Hellow ", "Hy"],
+//     }
+// }
+// console.log(Object.obb.one);
+// let againData = {
+//     dataagain: {
+//         one: [
+//             11,
+//             12,
+//             18,
+//         ],
+//         two: [
+//             22,
+//             75,
+//             98,
+//         ],
+//         three: [
+//             45,
+//             85,
+//             34,
+//         ]
+//     },
+// }
+// let element = document.getElementsByTagName('div');
+// console.log(element)
+// console.log(element[0]);
+// for (var key in againData.dataagain) {
+//     for (var key1 in againData.dataagain) {
+//         console.log(againData.dataagain[key][key1])
+//     }
+// }
+
+
+
+// function myFunction() {
+//     var input, filter, table, tr, td, i;
+//     input = document.getElementById("myInput");
+//     filter = input.value.toUpperCase();
+//     table = document.getElementById("myTable");
+//     tr = table.getElementsByTagName("tr");
+//     for (i = 0; i < tr.length; i++) {
+//         td = tr[i].getElementsByTagName("td")[0];
+//         if (td) {
+//             if (td.i
+//                 nnerHTML.toUpperCase().indexOf(filter) > -1) {
+//                 tr[i].style.display = "";
+//             } else {
+//                 tr[i].style.display = "none";
+//             }
+//         }
+//     }
+// }
+// function sendMail(params) {
+//     var temParams = {
+//         from_name: document.getElementById('fromName').value,
+//         //to_name: document.getElementById('toName').value,
+//         to_name: "Usama Khalid",
+//         message: document.getElementById('message').value,
+//     }
+//     emailjs.send('service_eic83v9', 'template_bwakrbt', temParams,)
+//         .then(function (res) {
+//             console.log("success", res.status)
+//         })
+// }
+
+
+// const err = new Promise((resolve, reject) => {
+//     reject(new Error('This is error'));
+// });
+// const p1 = new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//         resolve("First Promise");
+//     }, 500);
+// });
+// p1.then((err) => {
+//     console.log(err + "this is working")
+// });
+// const p2 = new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//         resolve('ho gaya')
+//     }, 800);
+// });
+// p2.then((done) => {
+//     console.log(done);
+// });
+// Promise.any([err, p1, p2]).then((res) => {
+//     console.log(res)
+// })
+
+const e1 = new Promise((resolve, reject) => {
+    reject(new Error('Error'))
+});
+const e2 = new Promise((resolve, reject) => {
+    reject(new Error('Error'));
+});
+Promise.any([e1, e2]).then((res) => {
+    console.log(res);
+})
+    .catch((err) => {
+        console.log(err)
+    });
+
+    const student = {
+    name: "Usama",
+    age: 20,
+    address: {
+        number: 45,
+        street: "Flower street"
+    }
+}
+const ref = new WeakRef(student);
+ref.deref().age;
+console.log(ref.deref().age)
+
+const student1 = {
+    name1: "Usama",
+    age1: 20,
+    address1: {
+        number1: 45,
+        street1: "Flower street"
+    }
+}
+console.log(student1.age1);
+
+const product = {
+    stock: 0,
+    exp: '',
+    isMArried: false,
+    has: null,
+}
+product.stock ||= 10;
+console.log(product.stock);
+product.exp ||= "Taareekh per taaareeekh";
+console.log(product.exp)
+product.isMArried ||= true;
+console.log(product.isMArried);
+product.has ||= "Hellow";
+console.log(product.has)
+document.writeln(product.stock + product.exp + product.isMArried + product.has)
+
+
+// const person = {
+// };
+// if (person.name === undefined || person.name === null) {
+//     person.name = 'User 1';
+// }
+// console.log(person.name);
+// if (person.age === undefined || person.age === null) {
+//     person.age = 18;
+// }
+// console.log(person.age);
+
+let str3 = 'Usama1 khalied'.replace(new RegExp('Usama1', 's'), 'Uzaier');
+// console.log(str3)
+
+// let billionare = 10_000009_0000;
+// console.log(billionare)
+
+// let text = "My name is khalied Mehmood";
+// let end = text.search("name");
+// let inp = document.querySelector('#inp');
+// document.querySelector('#demo').innerHTML = end;
+// function myfun() {
+
+//     console.log(inp.value);
+// }
+// let str = 'hotdog dog'.replace(new RegExp('dog', 'g'), 'cat');
+// console.log(str)
+
+// let str1 = 'Usama khalied'.replace(new RegExp('Usama', 's'), 'Anus');
+// console.log(str1)
+
+let name = "Usama khalid";
+const naming = (namingName) => {
+    return namingName.split(' ');
+}
+name = naming(name);
+console.log(name);
+
+
+let name = "Uzaier khalied"
+const myfun = (namingconvension) => {
+    return namingconvension.split(' ');
+}
+name = myfun(name);
+ console.log(name);
+ const createButton = ({ title, color, disabled, padding, margin, border, shadow }) => {
+    console.log(title, color, disabled, padding, margin, border, shadow)
+}
+
+createButton({
+    title: 'John Wick',
+    disabled: true,
+    shadow: '2px....'
+});
+const user = {
+    name: "Muhammad ahsab aayz",
+    email: "Hi@gmail.com",
+    designation: 'Software developer',
+    lover: "The code with ayaz community"
+};
+const name = user.name;
+const email = user.email
+const love = user.lover
+
+stoke.number ||= 40;
+stoke.stri ||= "This is new String";
+stoke.hasdone ||= true;
+console.log(stoke.number);
+console.log(stoke.stri);
+console.log(stoke.hasdone)
+
+
+const getDetails = () => {
+    return ['Muhammad Ahsan', 'hi@codewithahsan.dev', 'Some Street', 'Some City', 'Some Zip', 'Some Country'];
+}
+
+const list = () => {
+    return ['Anus Imran',
+        'Hobby Cricket',
+        'Class 11',
+        '5.7 inch heigth']
+}
+const newRay = [
+    "Hellow",
+    "Naazreen",
+]
+const listArra = newRay;
+const [name, ...newArra] = listArra;
+
+
+const uAddress = newArra.join(',');
+console.log(uAddress)
+
+const stoke = {
+    number: 0,
+    stri: "",
+    hasdone: false,
+}
