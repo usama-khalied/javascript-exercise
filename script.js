@@ -235,44 +235,56 @@ let mql = window.matchMedia('(max-width: 600px)');
 //     console.log(filtered)
 // }
 
-let team = [
-    {
-        id: 101,
-        name: "Usama",
-        class: "one"
-    },
-    {
-        id: 102,
-        name: "Bilal",
-        class: "Sixth"
-    },
-    {
-        id: 103,
-        name: "Bilal",
-        class: "Two"
-    },
-    {
-        id: 104,
-        name: "Areeb",
-        class: "one"
-    },
-    {
-        id: 105,
-        name: "Uzaier",
-        class: "Eight"
-    }
-];
+// let team = [
+//     {
+//         id: 101,
+//         name: "Usama",
+//         class: "one"
+//     },
+//     {
+//         id: 102,
+//         name: "Bilal",
+//         class: "Sixth"
+//     },
+//     {
+//         id: 103,
+//         name: "Bilal",
+//         class: "Two"
+//     },
+//     {
+//         id: 104,
+//         name: "Areeb",
+//         class: "one"
+//     },
+//     {
+//         id: 105,
+//         name: "Uzaier",
+//         class: "Eight"
+//     }
+// ];
 // let developer = team.filter(function (e) {
 //     return e.class == "one";
 // });
 // console.log(developer)
-let para = document.querySelector('#para');
-let newDev = team.filter(function (e) {
-    return e.name !== "Bilal"
-})
-let newMp = newDev.map(function (e) {
-    return `<p> ${e.name} </p> <br/>
-             <p>  ${e.class} </p> <br/> <p> ${e.id} </p>`
-});
-console.log(newMp)
-para.innerHTML = newMp.join("");
+// let para = document.querySelector('#para');
+// let newDev = team.filter(function (e) {
+//     return e.name !== "Bilal"
+// })
+// let newMp = newDev.map(function (e) {
+//     return `<p> ${e.name} </p> <br/>
+//              <p>  ${e.class} </p> <br/> <p> ${e.id} </p>`
+// });
+// console.log(newMp)
+// para.innerHTML = newMp.join("");
+
+/// =============================== /////
+///   Local Storage Practice Exercise //
+////============================== //////
+
+
+window.localStorage.setItem('name' , "Anus")
+window.localStorage.setItem('name2' , "Uzaier")
+localStorage.removeItem('name')
+let result =  localStorage.getItem('name2');
+console.log(result.textContent = "My name is " + result)
+console.log(result)
