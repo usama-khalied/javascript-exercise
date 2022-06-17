@@ -282,9 +282,36 @@ let mql = window.matchMedia('(max-width: 600px)');
 ////============================== //////
 
 
-window.localStorage.setItem('name' , "Anus")
-window.localStorage.setItem('name2' , "Uzaier")
-localStorage.removeItem('name')
-let result =  localStorage.getItem('name2');
-console.log(result.textContent = "My name is " + result)
-console.log(result)
+// window.localStorage.setItem('name' , "Anus")
+// window.localStorage.setItem('name2' , "Uzaier")
+// localStorage.removeItem('name')
+// let result =  localStorage.getItem('name2');
+// console.log(result.textContent = "My name is " + result)
+// console.log(resultv )
+
+// let impArr = ['aaloo', 'gaajar', 'mooli']
+// localStorage.setItem('name' , 'harry');
+// localStorage.setItem('name2' , 'Usama');
+// localStorage.setItem('Sabzi',JSON.stringify(impArr)) ;
+
+let con = JSON.parse(localStorage.getItem('Sabzi'));
+// console.log(con)
+
+let newArr = ['Usama','khalid','Uzaier'];
+console.log(newArr);
+
+let convert = JSON.stringify(newArr)
+console.log(convert)
+
+let convert2 = JSON.parse(convert);
+console.log(convert2);
+
+// var jsonPerson = '{"first_name":"billy", "age":23}';
+// var personObject = JSON.parse(jsonPerson); //p
+// console.log(personObject)
+// var jjperson = JSON.stringify(personObject);
+// console.log(jjperson)
+ let impArr = ['aaloo', 'gaajar', 'mooli']
+ sessionStorage.setItem('sessionName' , 'harry');
+ sessionStorage.setItem('sessionName2' , 'Usama');
+ sessionStorage.setItem('sessionSabzi',JSON.stringify(impArr)) ;
