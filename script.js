@@ -334,3 +334,13 @@ let con = JSON.parse(localStorage.getItem('Sabzi'));
 // function getRandom(){
 //     return Math.floor(Math.random() * num4.length).toString()
 // }
+
+// ------------------------//
+//  New Projects           //
+// ----------------------- //
+
+const name  = ["james" , "bond"];
+const othername = ["Micheal" , "Jackson"];
+
+const allnames = [...name , ...othername];
+console.log(allnames)
