@@ -17,5 +17,16 @@
 // a.then(res => console.log(res))
 // console.log("Last line harry ")
 
- 
 
+ async  function user(){
+    let name  = "USama";
+    if(name==="Usama"){
+      return  await name;
+    }
+ }
+user().then(res =>  {
+    console.log(res)
+}).catch(err => {
+console.log("error")
+})
+user();
