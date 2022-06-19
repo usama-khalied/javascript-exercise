@@ -18,15 +18,18 @@
 // console.log("Last line harry ")
 
 
- async  function user(){
-    let name  = "USama";
-    if(name==="Usama"){
-      return  await name;
-    }
- }
-user().then(res =>  {
-    console.log(res)
-}).catch(err => {
-console.log("error")
-})
-user();
+//  async  function user(){
+//     let name  = "Usama";
+//     if(name==="Uaama"){
+//       return  await name;
+//     }
+//     else {
+// console.log("Nh chala bey")
+//     }
+//  }
+// user().then(res =>  {
+//     console.log("res")
+// }).catch(err => {
+//     console.log(err)
+// })
+// user();
