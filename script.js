@@ -26,16 +26,16 @@
 //   console.log(Value +' x ' + i + ' = ' + total)
 //   }
 // }
-let tempDate = new Date();
-let tempYear = tempDate.getFullYear();
-let tempMonth = tempDate.getMonth();
-let tempDay = tempDate.getDate();
-const date = new Date(tempMonth);
-console.log(tempDay)
-let day = date.getDate();
+// let tempDate = new Date();
+// let tempYear = tempDate.getFullYear();
+// let tempMonth = tempDate.getMonth();
+// let tempDay = tempDate.getDate();
+// const date = new Date(tempMonth);
+// console.log(tempDay)
+// let day = date.getDate();
 
 
-let startDate = new Date()
+// let startDate = new Date()
 
 
 
@@ -297,21 +297,50 @@ let mql = window.matchMedia('(max-width: 600px)');
 let con = JSON.parse(localStorage.getItem('Sabzi'));
 // console.log(con)
 
-let newArr = ['Usama','khalid','Uzaier'];
-console.log(newArr);
+// let newArr = ['Usama','khalid','Uzaier'];
+// console.log(newArr);
 
-let convert = JSON.stringify(newArr)
-console.log(convert)
+// let convert = JSON.stringify(newArr)
+// console.log(convert)
 
-let convert2 = JSON.parse(convert);
-console.log(convert2);
+// let convert2 = JSON.parse(convert);
+// console.log(convert2);
 
 // var jsonPerson = '{"first_name":"billy", "age":23}';
 // var personObject = JSON.parse(jsonPerson); //p
 // console.log(personObject)
 // var jjperson = JSON.stringify(personObject);
 // console.log(jjperson)
- let impArr = ['aaloo', 'gaajar', 'mooli']
- sessionStorage.setItem('sessionName' , 'harry');
- sessionStorage.setItem('sessionName2' , 'Usama');
- sessionStorage.setItem('sessionSabzi',JSON.stringify(impArr)) ;
+//  let impArr = ['aaloo', 'gaajar', 'mooli']
+//  sessionStorage.setItem('sessionName' , 'harry');
+//  sessionStorage.setItem('sessionName2' , 'Usama');
+//  sessionStorage.setItem('sessionSabzi',JSON.stringify(impArr));
+
+
+
+// ------------------------//
+//  New Projects           //
+// ----------------------- //
+
+// let Value = document.querySelector('#user');
+// let num4 = [1,2,3,4,5,6,7,13,14]
+// function func() {
+//   randomnuu = getRandom();
+//   console.log(randomnuu);
+//   if(randomnuu == "8") {
+//     alert("Greater than 13")
+//   }
+// }
+// function getRandom(){
+//     return Math.floor(Math.random() * num4.length).toString()
+// }
+
+// ------------------------//
+//  New Projects           //
+// ----------------------- //
+
+const name  = ["james" , "bond"];
+const othername = ["Micheal" , "Jackson"];
+
+const allnames = [...name , ...othername];
+console.log(allnames)
