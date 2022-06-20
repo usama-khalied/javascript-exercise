@@ -75,17 +75,17 @@ let startDate = new Date()
 
 // }
 
-let count = 0;
-function plus() {
-    document.getElementById('count').innerHTML = count;
-    count++;
+// let count = 0;
+// function plus() {
+//     document.getElementById('count').innerHTML = count;
+//     count++;
 
-}
-function minus() {
-    count--;
-    document.getElementById('count').innerHTML = count;
+// }
+// function minus() {
+//     count--;
+//     document.getElementById('count').innerHTML = count;
 
-}
+// }
 
 // Trick One
 
