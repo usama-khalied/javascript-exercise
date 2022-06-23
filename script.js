@@ -339,8 +339,20 @@ let con = JSON.parse(localStorage.getItem('Sabzi'));
 //  New Projects           //
 // ----------------------- //
 
-const name  = ["james" , "bond"];
-const othername = ["Micheal" , "Jackson"];
+// const name  = ["james" , "bond"];
+// const othername = ["Micheal" , "Jackson"];
 
-const allnames = [...name , ...othername];
-console.log(allnames)
+// const allnames = [...name , ...othername];
+// console.log(allnames)
+
+let my =  function myfun(x,y,z){
+if(x < y && x > y && z > y && z < y ){
+    return true
+}
+else {
+    return false
+}
+
+}
+myfun(30,60,90)
+console.log(my)
