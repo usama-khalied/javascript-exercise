@@ -33,3 +33,22 @@
 //     console.log(err)
 // })
 // user();
+
+
+// async function harry(){
+//     console.log("A");
+//   await  console.log("B");
+//     console.log("C");
+// }
+// harry();
+// console.log("D");
+// console.log("E");
+
+async function func(){
+    console.log("2 : Messege");
+  await  console.log("3 : Messege");
+    console.log("4 : Messege");
+}
+console.log("1 : Messege");
+func();
+console.log("5 : Messege");
