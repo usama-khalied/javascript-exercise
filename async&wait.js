@@ -44,11 +44,11 @@
 // console.log("D");
 // console.log("E");
 
-async function func(){
-    console.log("2 : Messege");
-  await  console.log("3 : Messege");
-    console.log("4 : Messege");
-}
-console.log("1 : Messege");
-func();
-console.log("5 : Messege");
+// async function func(){
+//     console.log("2 : Messege");
+//   await  console.log("3 : Messege");
+//     console.log("4 : Messege");
+// }
+// console.log("1 : Messege");
+// func();
+// console.log("5 : Messege");
