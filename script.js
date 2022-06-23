@@ -345,14 +345,53 @@ let con = JSON.parse(localStorage.getItem('Sabzi'));
 // const allnames = [...name , ...othername];
 // console.log(allnames)
 
-let my =  function myfun(x,y,z){
-if(x < y && x > y && z > y && z < y ){
-    return true
-}
-else {
-    return false
-}
+// function myfun(x,y,z){
+//     max_val = 0;
+// if(x  >  y) {
+// max_val = x;
+// }
+// else {
+// max_val =y;
+// }
+// if(y > z){
+// max_val = y;
+// }
+// else {
+//     max_val = z
+// }
+// return max_val
+// }
 
-}
-myfun(30,60,90)
-console.log(my)
+// console.log(myfun(100,200,300));
+// let yy = myfun();
+// console.log(yy)
+
+// function myfun(x ,y,z){
+//     let num = 0;
+//     if(x > y ){
+//         num = x
+//     }
+//     else {
+//         num = y;
+//     }
+//     if( y > z){
+//       num = y;
+//     }
+//     else {
+//         num = z
+//     }
+//     return num
+// }
+// console.log(myfun(0,-1,1));
+
+// function myfun(x ,y,z){
+//     let num = 0;
+//     if(x > y ){
+//         num = x
+//     }
+//     else {
+//         num = y;
+//     }
+//     return num;
+// }
+// console.log(myfun(77,89));
