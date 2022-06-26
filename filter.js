@@ -71,21 +71,71 @@ let competation = ["Usama","Anus",
 // halfArr("Myname", 3 , String);
 // console.log(halfArr)
 
-let obj = [{
-    name :"Usama",
-    graduation:2022,
-},
-{
-name : "natasha",
-graduation:2022,
-},
-{
-name :"Usama",
-graduation:2021,
-},
-]
-let curentYear = new Date().getFullYear();
-let mesure = obj.filter(val => 
-    val.graduation !== curentYear
-    );
-    console.log(mesure)
+// let obj = [{
+//     name :"Usama",
+//     graduation:2022,
+// },
+// {
+// name : "natasha",
+// graduation:2022,
+// },
+// {
+// name :"Usama",
+// graduation:2021,
+// },
+// ]
+// let curentYear = new Date().getFullYear();
+// let mesure = obj.filter(val => 
+//     val.graduation !== curentYear
+//     );
+//     console.log(mesure);
+// const menu = [
+//     {
+//       name: "buttermilk pancakes",
+//       category: "breakfast",
+//       price: 15.99,
+//       status: "available"
+//     },
+//     {
+//       name: "diner double",
+//       category: "lunch",
+//       price: 13.99,
+//       status: "available"
+//     },
+//     {
+//       name: "godzilla milkshake",
+//       category: "shakes",
+//       price: 6.99,
+//       status: "available"
+//     },
+//     {
+//       name: "country delight",
+//       category: "breakfast",
+//       price: 20.99,
+//       status: "86"
+//     },
+//     {
+//         name: "country delight",
+//         category: "breakfast",
+//         price: 20.99,
+//         status: "83"
+//       },
+//     {
+//       name: "egg attack",
+//       category: "lunch",
+//       price: 22.99,
+//       status: "available"
+//     }
+//   ];
+//   let newArr = menu.filter((e) => e.category === "breakfast");
+//   console.log(newArr);
+
+//   const deligth = newArr.find((para) => para.name ==="country delight");
+//   console.log(deligth);
+
+//   if(deligth.status !== "86") {
+//     console.log("Available");
+//   }
+//   else {
+//     console.log("Not Available");
+//   }
