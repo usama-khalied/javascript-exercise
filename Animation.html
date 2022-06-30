@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Earth Demo</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./earth.js"></script>
+
+    <script>
+      var myearth;
+      var sprites = [];
+
+      window.addEventListener("load", function () {
+        myearth = new Earth(document.getElementById("myearth"), {
+          light: "none",
+
+          texture: "texture-tiny-dots.svg",
+          transparent: true,
+
+          location: { lat: 0, lng: 0 },
+
+          autoRotate: true,
+          autoRotateSpeed: 1.2,
+          autoRotateDelay: 100,
+          autoRotateStart: 2000
+        });
+
+        myearth.addEventListener("ready", function () {
+          this.startAutoRotate();
+
+          // connections
+
+          // add 5 shine sprites
+
+          for (var i = 0; i < locations.length; i++) {
+            sprites[i] = this.addSprite({
+              image: "point.svg",
+              scale: 0.01,
+              offset: -0.5
+            });
+            pulse(i);
+            //setTimeout( function() { pulse( 1 ); }, 300 );
+          }
+        });
+      });
+
+      function getRandomInt(min, max) {
+        min = Math.ceil(min);
+        max = Math.floor(max);
+        return Math.floor(Math.random() * (max - min)) + min;
+      }
+
+      const locations = [
+        [59.651901245117, 17.918600082397],
+        [51.4706, -0.461941],
+        [30.12190055847168, 31.40559959411621],
+        [28.566499710083008, 77.10310363769531]
+      ];
+
+      function pulse(index) {
+        var random_location = locations[index];
+        sprites[index].location = {
+          lat: random_location[0],
+          lng: random_location[1]
+        };
+
+        sprites[index].animate("scale", 0.6, {
+          easing: "out-quad",
+          duration: 300,
+          complete: function () {
+            this.animate("scale", 0.01, {
+              easing: "in-quad",
+              duration: 300,
+              complete: function () {
+                setTimeout(function () {
+                  pulse(index);
+                }, getRandomInt(100, 400));
+              }
+            });
+          }
+        });
+      }
+    </script>
+  </head>
+
+  <body>
+    <div class="earth-3d">
+      <div id="myearth">
+        <div id="glow"></div>
+      </div>
+    </div>
+  </body>
+</html>
