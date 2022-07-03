@@ -282,7 +282,7 @@ let mql = window.matchMedia('(max-width: 600px)');
 ////============================== //////
 
 
-// window.localStorage.setItem('name' , "Anus")
+  
 // window.localStorage.setItem('name2' , "Uzaier")
 // localStorage.removeItem('name')
 // let result =  localStorage.getItem('name2');
