@@ -1,37 +1,55 @@
 let val = document.querySelector('#val');
 let btn = document.querySelector('#btn');
-let para = document.querySelector('.para');
+let section = document.querySelector('.section');
 let del = document.querySelector('.del');
 var id = (new Date().getTime()).toString(36);
-// var obj = {
-//   Text:val.value,
-//   ID:id
-// }
+let Arr = []
+
+
+
+
+
+
+
+
 
 btn.addEventListener("click" , function(btn){
   var obj = {
     ID:id,
     Text:val.value
-  }
+  };
 
-let get = window.localStorage.setItem(obj.Text,obj.ID);
-let set = window.localStorage.getItem(obj); 
+let setValue = window.localStorage.setItem(obj.Text,obj.ID);
+let getValue = window.localStorage.getItem(obj.Text); 
+for(let i= 0;i < window.localStorage.length;i++){
+  // let arrKeys = localStorage.key(i);
+  Arr.push(localStorage.key(i))
+  // console.log(Arr)
+}
+random();
 });
 
 
+//fetch method 
+function random() {
+  let displayMenu = Arr.map(function (item , index) {
+    return `<p class="item-text"> ${index}   ${item}</p>`;
+  });
+  displayMenu = displayMenu.join("");
+  console.log(displayMenu);
+  section.innerHTML = displayMenu;
+}
 
-// fetch method 
-window.onload = function() {
-  // let x = (localStorage.key(i));
-  let y  =   new Array(localStorage.length)
-  .fill()
-  .map(i => localStorage.key(i));
-  para.innerHTML = y;
+window.addEventListener("DOMContentLoaded", function () {console.log(random())});
 
 
-};
 
-del.addEventListener('click', function() {
 
-  localStorage.removeItem('"my name is khalied"');
-})
+
+
+
+
+
+  
+
+
