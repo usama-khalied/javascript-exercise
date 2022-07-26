@@ -14,15 +14,10 @@ let Arr = []
 
 
 btn.addEventListener("click" , function(btn){
-  var obj = {
-    ID:id,
-    Text:val.value
-  };
-
-let setValue = window.localStorage.setItem(obj.Text,obj.ID);
-let getValue = window.localStorage.getItem(obj.Text); 
+let setValue = window.localStorage.setItem(val.value,id);
+let getValue = window.localStorage.getItem(val.value); 
 for(let i= 0;i < window.localStorage.length;i++){
-  // let arrKeys = localStorage.key(i);
+
   Arr.push(localStorage.key(i))
   // console.log(Arr)
 }
@@ -36,13 +31,18 @@ function random() {
     return `<p class="item-text"> ${index}   ${item}</p>`;
   });
   displayMenu = displayMenu.join("");
-  console.log(displayMenu);
+  console.log(displayMenu)
   section.innerHTML = displayMenu;
 }
 
-window.addEventListener("DOMContentLoaded", function () {console.log(random())});
+window.addEventListener("DOMContentLoaded", function () {
+console.log(random());
+});
 
+del.addEventListener("click",function(){
+  window.localStorage.removeItem(val.value)
 
+})
 
 
 
