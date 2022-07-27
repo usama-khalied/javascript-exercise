@@ -3,49 +3,37 @@ let btn = document.querySelector('#btn');
 let section = document.querySelector('.section');
 let del = document.querySelector('.del');
 var id = (new Date().getTime()).toString(36);
-let Arr = []
-
-
-
-
-
-
-
-
+let getArr = []
 
 btn.addEventListener("click" , function(btn){
-let setValue = window.localStorage.setItem(val.value,id);
-let getValue = window.localStorage.getItem(val.value); 
+  window.localStorage.setItem(val.value,id);
+  window.localStorage.getItem(val.value); 
 for(let i= 0;i < window.localStorage.length;i++){
-
-  Arr.push(localStorage.key(i))
-  // console.log(Arr)
+  getArr.push(localStorage.key(i))
 }
-random();
+random()
 });
-
-
-//fetch method 
+//Mapping  method 
 function random() {
-  let displayMenu = Arr.map(function (item , index) {
+  let displayMenu = getArr.map(function (item , index) {
     return `<p class="item-text"> ${index}   ${item}</p>`;
   });
   displayMenu = displayMenu.join("");
-  console.log(displayMenu)
   section.innerHTML = displayMenu;
 }
-
+// onLoad Fetch Method 
 window.addEventListener("DOMContentLoaded", function () {
-console.log(random());
-});
+for(let j =0 ; j < window.localStorage.length; j++){
+  getArr.push(localStorage.key(j))
+}
+random();
+  });
 
+  // Delete method 
 del.addEventListener("click",function(){
   window.localStorage.removeItem(val.value)
 
 })
-
-
-
 
 
 
