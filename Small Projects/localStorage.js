@@ -30,10 +30,12 @@ random();
   });
 
   // Delete method 
-del.addEventListener("click",function(){
-  window.localStorage.removeItem(val.value)
+  let item = document.querySelector('.p');
+del.addEventListener("click",function(e){
+  random();
+  localStorage.clear();
 
-})
+});
 
 
 
