@@ -11,12 +11,13 @@ btn.addEventListener("click" , function(btn){
 for(let i= 0;i < window.localStorage.length;i++){
   getArr.push(localStorage.key(i))
 }
+val.value = "";
 random()
 });
 //Mapping  method 
 function random() {
   let displayMenu = getArr.map(function (item , index) {
-    return `<p class="item-text"> ${index}   ${item}</p>`;
+    return `<p class="item-text"> ${index}  ) ${item}</p>`;
   });
   displayMenu = displayMenu.join("");
   section.innerHTML = displayMenu;
@@ -31,8 +32,9 @@ random();
 
   // Delete method 
   let item = document.querySelector('.p');
+
 del.addEventListener("click",function(e){
-  random();
+  window.location.reload(true);
   localStorage.clear();
 
 });
