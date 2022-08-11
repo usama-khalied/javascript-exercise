@@ -21,14 +21,14 @@ val.value = " ";
 //Mapping  method
 function random() {
   let displayMenu = getArr.map(function (item , index) {
-    return `<p onclick="myFun(this.textContent)" class="item-text">${item}</p>`;
+    return `<p class="item-text">${item}<button onclick="myFun(this.textContent)">Delete</button></p>`;
   });
   displayMenu = displayMenu.join("");
   section.innerHTML = displayMenu;
 
 }
 
-
+// onclick="myFun(this.textContent)
 
 
 
@@ -43,7 +43,7 @@ window.addEventListener("DOMContentLoaded", function () {
 for(let j =0 ; j < window.localStorage.length; j++){
   getArr.push(localStorage.key(j))
 }
-myFun(val)
+
 random();
 
   });
@@ -59,6 +59,7 @@ del.addEventListener("click",function(e){
 // alert("Geee");
 // })
 function myFun(val) {
+  alert("This .value")
   for(let t =0 ; t < window.localStorage.length; t++){
        if(val == localStorage.key(t)) {
         let cut = val
@@ -69,5 +70,5 @@ function myFun(val) {
        }
   }
 
-console.log(getArr);
+
 }
