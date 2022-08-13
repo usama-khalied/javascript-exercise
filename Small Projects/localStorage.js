@@ -8,6 +8,10 @@ let del = document.querySelector('.del');
 let getArr = []
 
 btn.addEventListener("click" , function(btn){
+<<<<<<< Updated upstream
+=======
+  
+>>>>>>> Stashed changes
   let val = document.querySelector('#val');
   var id = (new Date().getTime()).toString(36);
   window.localStorage.setItem(val.value,id);
