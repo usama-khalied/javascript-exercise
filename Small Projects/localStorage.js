@@ -2,69 +2,68 @@
 let btn = document.querySelector('#btn');
 let section = document.querySelector('.section');
 let del = document.querySelector('.del');
-
-
-// var id = (new Date().getTime()).toString(36);
 let getArr = []
 
-btn.addEventListener("click" , function(btn){
 
+// Post on LocalStorage 
+btn.addEventListener("click" , function(btn){
   let val = document.querySelector('#val');
   var id = (new Date().getTime()).toString(36);
   window.localStorage.setItem(val.value,id);
-  // window.localStorage.getItem(val.value);
   getArr.push(val.value);
 random();
 myFun();
 val.value = " ";
-
 });
-//Mapping  method
-{/* <button onclick="Checking()">Delete</button> */}
+// Post on LocalStorage  End
+
+
+
+// localStorage Data  Push on Array[]
 function random() {
   let displayMenu = getArr.map(function (item , index) {
-
-
-    return `<p onclick="myFun(this.textContent)" class="item-text">${item}<button id="check" onclick="Checking()">Delete</button></p>`;
+    return `<p class="item-text">${item}<i id="check" onclick="myFun()" class="fa fa-trash-o" aria-hidden="true"></i></p>`;
   });
   displayMenu = displayMenu.join("");
   section.innerHTML = displayMenu;
 }
-function Checking(){
-  let child = document.querySelector('#check').innerHTML="";
-  let parent = document.querySelector('.item-text').textContent;
-  console.log(parent)
+// localStorage Data  Push on Array[] End
 
-}
 
-function myFun(val) {
+
+// Data Delete by ID
+function myFun() {
+  let child = document.querySelector('#check').parentElement.textContent;
   for(let t =0 ; t < window.localStorage.length; t++){
-       if(val == localStorage.key(t)) {
-        let cut = val
+       if(child == localStorage.key(t)) {
+        let cut = child
         if(window.confirm("Are you sure you want to delete this list ?")) {
             localStorage.removeItem(cut);
             window.location.reload();
         }
        }}}
-// onclick="myFun(this.textContent)"
-// onLoad Fetch Method
+// Data Delete by ID End
+
+
+
+
+// Fetch Method After Every CLick 
 window.addEventListener("DOMContentLoaded", function () {
 for(let j =0 ; j < window.localStorage.length; j++){
-  getArr.push(localStorage.key(j))
-}
-
+  getArr.push(localStorage.key(j))}
 random();
-
   });
+// Fetch Method After Every CLick End
 
-  // Delete method
+
+
+
+
+  // Delete All list method
 del.addEventListener("click",function(e){
   window.location.reload(true);
   localStorage.clear();
 });
+  // Delete All list method End
 
-// One list delete
-// deleteOne.addEventListener("click",function(){
-// alert("Geee");
-// })
 
