@@ -31,8 +31,10 @@ function random() {
   section.innerHTML = displayMenu;
 }
 function Checking(){
-  let parent = document.querySelector('#check').parentElement.textContent;
+  let child = document.querySelector('#check').innerHTML="";
+  let parent = document.querySelector('.item-text').textContent;
   console.log(parent)
+
 }
 
 function myFun(val) {
