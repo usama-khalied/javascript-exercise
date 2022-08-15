@@ -12,7 +12,6 @@ btn.addEventListener("click" , function(btn){
   window.localStorage.setItem(val.value,id);
   getArr.push(val.value);
 random();
-myFun();
 val.value = " ";
 });
 // Post on LocalStorage  End
