@@ -17,7 +17,7 @@ let Nm = 4;
 
 // Boolean to Number
 
-let Story = true;
+let Story = false;
 // Story = Number(Story);
 // console.log(Story,  typeof Story);
 
