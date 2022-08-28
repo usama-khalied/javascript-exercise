@@ -1,17 +1,18 @@
 
 let arrr = [{
-        id:3 },
+        id:003 },
      {
-        id:88,},
+        id:088 },
     {
-        id:99},
+        id:099},
     {
-        id:93,},];
+        id:093,},];
 
-let ee = arrr.reduce((h1,h2) =>  { 
-    // console.log(h1,h2)  
+let ee = arrr.reduce((h1,h2) =>  {
+    // console.log(h1,h2)
     return h1.id < h2.id ? h2 : h1;
 })
+console.log(ee.id)
 // });
 // console.log(ee)
 // console.log(ee.id);
@@ -22,4 +23,4 @@ let ee = arrr.reduce((h1,h2) =>  {
 
 // Escape Character
 // document.write("I m a \"good\" boy");
-console.log("I am a \"good\" body"); 
+// console.log("I am a \"good\" body");
