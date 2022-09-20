@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<input type="text" id="txt">
+<button id="submit">Check</button>
+<p id="demo"></p>
+<script>
+    const btn =  document.querySelector('#submit');
+    btn.addEventListener("click",function(){
+        let textValue =  document.querySelector("#txt");
+        let message =  document.querySelector("#demo");
+
+         try {
+            if(textValue.value==="") throw "Empty"
+            if(textValue.value < 5 ) throw "height is very small"
+            if(textValue.value > 10) throw  "Height is very large"
+            // else message.innerHTML = "Prefect Height"
+         }
+         catch(err) {
+                  message.innerHTML = `this is ${err}`
+         }
+         finally {
+            document.getElementById("demo").innerHTML = "Prefect Height";
+         }
+    })
+    
+    
+function div(){
+    let x = prompt('First  name ');
+    let y = prompt('Last name');
+    
+    if(isNaN(x) || isNaN(y) || x == '' || y == ''){
+        throw new Error('Khali hai ');
+    }else if(y == 0){
+         throw new Error('0 hai is mai bhai ')
+    }else{
+        alert(x / y);
+    }
+}
+
+try{
+    div();
+}catch(err){
+    alert(err.message);
+}finally{
+    alert('Ho gaya done is mai ');
+}
+</script>
+    
+</body>
+</html>
