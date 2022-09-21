@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<script>
+    /* console.log is used to print output in browser console. We can print string or any others d*/ 
+     console.log("this is console");
+
+     /*console.warn is used to print warnings in browser console. */
+     console.log("This is warning")
+
+     /*console.table is used to display Arrays and Objects data in
+      console. The argument in table method is either a Array or Object. */
+      console.table({name:"Usama",email:"usamakhalied@gmailc.com"});
+    //   or
+      console.table(["abcd","efgh","hijk","lmn"]);
+
+      /*console.time() is used to measure time ( in ms) taken by task to run. */
+      console.time('timer');
+      for(var i=1; i<=1000; i++){
+        console.log(i)
+    // document.querySelector('select.num').innerHTML+="<option>"+ i +"</option>";
+         }
+
+
+         console.assert(1===false);
+         console.timeEnd('timer'); 
+
+/* Clear console use console.clear()*/ 
+// console.clear();
+
+let OperatingSystem = navigator.appVersion;
+console.log(OperatingSystem)
+
+</script>
+</body>
+</html>
