@@ -7,7 +7,8 @@
     <title>Document</title>
 </head>
 <body>
-    
+  <button id="checkOs"> Click me</button>
+  <p id="para"></p>
 <script>
     /* console.log is used to print output in browser console. We can print string or any others d*/ 
      console.log("this is console");
@@ -23,10 +24,9 @@
 
       /*console.time() is used to measure time ( in ms) taken by task to run. */
       console.time('timer');
-      for(var i=1; i<=1000; i++){
-        console.log(i)
-    // document.querySelector('select.num').innerHTML+="<option>"+ i +"</option>";
-         }
+      // for(var i=1; i<=1000; i++){
+      //   console.log(i)
+      //    }
 
 
          console.assert(1===false);
@@ -39,5 +39,6 @@ let OperatingSystem = navigator.appVersion;
 console.log(OperatingSystem)
 
 </script>
+<script src="./OS.js"></script>
 </body>
 </html>
