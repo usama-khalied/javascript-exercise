@@ -33,7 +33,7 @@ const Player2 = {
 
 let AssignPlayers = Object.assign(Player1,Player2,{score:10})
 
-// console.log(AssignPlayers)
+console.log(AssignPlayers)
 
 // The output is { score: 10, name: 'Ronaldo' }
 
