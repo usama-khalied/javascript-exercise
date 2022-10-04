@@ -103,3 +103,33 @@ playBioData() {
 let newcreateObje = new B('Tayyaba',10,'tayyabakhalied@gmail.com',"hockey");
 console.log(newcreateObje.playBioData())
 // console.log(newcreateObje)
+
+
+
+
+
+
+
+// Incapsulation ( Object Oriented Programming ) - OOP
+
+class Bank {
+    name;
+    no;
+    constructor(name,no) {
+       this.name = name;
+       this.#no = no;
+    }
+
+    function() {
+        console.log(`My name is ${this.name} and my email ${this.#no}`)
+    }
+    setBalance(amount) {
+          this.#no = amount;
+    }
+}
+let Obj =  new Bank("Usama",500);
+
+// console.log(Obj);
+// Obj.#no = 1000;
+// Obj.setBalance(1000)
+console.log(Obj)
