@@ -71,4 +71,54 @@ createObje.__proto__ = new Student('Anus',10,'anuskhalied@gmail.com')
 // console.log(func)
 
 
+
+
+
+
+
+
+
+
+class B extends A {
+constructor( name,email,age,game) {
+    super(name,age,email)
+     this.game = game;
+}
+playBioData() {
+       return `${super.biodata()} and i play ${this.game}`
+    // console.log(`my name is ${this.name} , and my age ${this.age} and my email ${this.email} and i play ${this.game}`)
+}   
+}
+let newcreateObje = new B('Tayyaba',10,'tayyabakhalied@gmail.com',"hockey");
+console.log(newcreateObje.playBioData())
 // console.log(newcreateObje)
+
+
+
+
+
+
+
+// Incapsulation ( Object Oriented Programming ) - OOP
+
+class Bank {
+    name;
+    no;
+    constructor(name,no) {
+       this.name = name;
+       this.#no = no;
+    }
+
+    function() {
+        console.log(`My name is ${this.name} and my email ${this.#no}`)
+    }
+    setBalance(amount) {
+          this.#no = amount;
+    }
+}
+let Obj =  new Bank("Usama",500);
+
+// console.log(Obj);
+// Obj.#no = 1000;
+// Obj.setBalance(1000)
+console.log(Obj)
