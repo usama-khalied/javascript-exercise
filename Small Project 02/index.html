@@ -17,18 +17,25 @@
     const btn =  document.querySelector('#btn');
     let para =  document.querySelector('p');
     btn.addEventListener('click',function() {
-        let inputValue = document.querySelector('#inputValue');
-        // let newArr = []
-        let empty = ""
-        // Object.assign(newArr,inputValue.value)
-        inputValue.forEach(element => {
-            if(!element===empty){
-              return  empty+=element
-            }
-        
-        });
-          para.innerHTML = empty
+        let inputValue = document.querySelector('#inputValue');      
+        let arr  =  inputValue.value;  
+
+        for (let i = 0; i < arr.length; i++) {
+          empty = "";
+          debugger
+          if(!empty.includes(arr[i])) {
+             empty = empty + arr[i];
+            console.log(empty)
+           
+         
+          }
+          
+          // console.log(empty)        
+
+        }
+        para.innerHTML = empty;
         // para.innerHTML = inputValue.value
+        console.log(para)
     })
 </script>
 </body>

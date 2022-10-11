@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+
+<script>
+    var date =  new Date();
+    let getPM  = date.getHours() > 12 ? "Pm" : "Am"; 
+     const days = ['Sunday', 'Monday','Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
+     let hours = date.getHours() >= 12 ? date.getHours()-12 : date.getHours();
+document.writeln("Today is : " + days[date.getDay()] + "<br/>")
+document.writeln("Current Time : " +hours+ " : "  + getPM+ " : " + date.getMinutes() + " : " + date.getSeconds())
+
+</script>
+
+</body>
+</html>
