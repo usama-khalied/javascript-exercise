@@ -15,9 +15,10 @@
     var date =  new Date();
     let getPM  = date.getHours() > 12 ? "Pm" : "Am"; 
      const days = ['Sunday', 'Monday','Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
-     let hours = date.getHours() >= 12 ? date.getHours()-12 : date.getHours();
+     let hours = date.getHours() > 12 ? "0"+date.getHours()-12 : date.getHours();
+    var hoursstring = hours > 10 ? hours : "0"+hours;
 document.writeln("Today is : " + days[date.getDay()] + "<br/>")
-document.writeln("Current Time : " +hours+ " : "  + getPM+ " : " + date.getMinutes() + " : " + date.getSeconds())
+document.writeln("Current Time : " +hoursstring+ " : "  + getPM+ " : " + date.getMinutes() + " : " + date.getSeconds())
 
 </script>
 
