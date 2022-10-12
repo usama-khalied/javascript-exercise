@@ -6,27 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-
-<body>
-
-<button onclick="myfun()"> Check </button>
+<body onload="animate_string('target')">
+  <pre id="target">w3resource </pre>
 
 
     <script>
+function animate_string(id) {}
+window.addEventListener('DOMContentLoaded',function () {
+    let target =  document.querySelector('#target');
+    let text   = target.textContent
+setInterval(() => {
+    text = [text.length - 1];
 
-        function myfun() {
-            let str = "W3resources";
-            // let arr =   Array.from(str);
-            // for (let i = 0; i < array.length; i++) {
-                 
-                   
-            // }
+    target.innerHTML = text
 
-            //   console.log(n)
-              let str1 = 'Mozilla';
+}, 200);
 
-console.log(str1.substring(1,-1));
-        }
+
+})
+
     </script>
 </body>
 </html>
+
+
+
+
+
+
