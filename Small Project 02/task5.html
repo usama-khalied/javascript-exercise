@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="val">
+    <button class="btn">Check Leap year</button>
+    <script>
+const btn = document.querySelector('.btn');
+let date = new  Date();
+let year  =  date.getFullYear()
+btn.addEventListener('click',function() {
+    let Value =  document.querySelector('#val');
+     if(Value.value==year) {
+        alert("Correct")
+     }
+     else {
+        alert("Wrong")
+     }
+
+})
+    </script>
+</body>
+</html>
