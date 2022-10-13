@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="myfun()"> Check</button>
+    <p class="p"></p>
+<script>
+
+let PrevYear = 2014;
+let FutureYear = 2050;
+function myfun() {
+let res = " ";
+for (let year = PrevYear; year <= FutureYear; ++year) {
+const c_year = new Date(year,0,1)
+if(c_year.getDay()===0) {
+    res += `Year is ${year}`
+    
+}   
+ 
+}           
+document.querySelector('p').innerHTML = res;                      
+                    
+}
+
+
+</script>    
+</body>
+</html>
