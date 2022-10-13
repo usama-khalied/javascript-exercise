@@ -6,24 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body onload="animate_string('target')">
-  <pre id="target">w3resource </pre>
+<body onload="animate_string()">
 
+<p id="para">W3resources</p>
 
     <script>
-function animate_string(id) {}
-window.addEventListener('DOMContentLoaded',function () {
-    let target =  document.querySelector('#target');
-    let text   = target.textContent
-setInterval(() => {
-    text = [text.length - 1];
-
-    target.innerHTML = text
-
-}, 200);
-
-
-})
+function animate_string() {
+    let textNode=  document.querySelector('#para')
+    var text = textNode.textContent;
+setInterval(function () 
+{
+ text = text[text.length - 1] + text.substring(0, text.length - 1);
+ console.log(text)
+  textNode.innerHTML = text;
+}, 100);
+}
 
     </script>
 </body>
