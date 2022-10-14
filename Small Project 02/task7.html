@@ -11,22 +11,39 @@
 
 
 let date =  new Date();
-let fudate = new Date(2022,12,25)
+let fudate = new Date(2022,11,25)
 
-   let t =  new Date(fudate.getFullYear(), (date.getMonth()+1) ,0).getDate();
-   let r =  new Date(fudate.getFullYear(), (fudate.getMonth()) ,0).getDate();
-   let result  = t+r
- console.log(result)
-
-
-
+   let t =  new Date(fudate.getFullYear(), (fudate.getMonth()) ,0).getDate();
+//    let r =  new Date(fudate.getFullYear(), (fudate.getMonth()) ,0).getDate();
+//    let result  = t+r
+//  console.log(result)
+console.log(t)
 
 
 
 
+let today = new Date();
+let christmasYear = today.getFullYear();
+
+if (today.getMonth() == 11 && today.getDate() > 25) {
+  christmasYear = christmasYear + 1;
+}
+
+let christmasDate = new Date(christmasYear, 11, 25);
+let dayMilliseconds = 1000 * 60 * 60 * 24;
+console.log(dayMilliseconds / 60)
+let remainingDays = Math.ceil(
+  (christmasDate.getTime() - today.getTime()) /
+   (dayMilliseconds)
+);
+// console.log(remainingDays)
 
 
+let myVar = "UserVar";
+let myVal = "UserVal"
 
+ this[myVar] = myVal
+console.log(this[myVar])
     </script>
 </body>
 </html>
