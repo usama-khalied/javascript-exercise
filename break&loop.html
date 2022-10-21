@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p class="para"></p>
+    <script>
+
+                //  Continue Statement 
+             
+    //    Continue statement ka mtlb hai k agar mai 
+    //    beech mai kahi (if == 3) lagaata hu to wo to 
+    //    print ho jaayen ga magar loop dubara sy 3 
+    //    sey print hona shuru ho jaayen is bacheney k.
+        //   liay hum Continue lagaatey hai          
+
+                //     Examples 
+
+
+    //   let text = "";
+    //   for (let i = 0; i < 10; i++) {
+    //     if (i == 3) {
+    //     text += "The number is " + i + "<br>";
+    //       continue;
+    //     }
+    //     debugger;
+    //     text += "The number is " + i + "<br>";
+    //   }
+    //   document.querySelector(".para").innerHTML = text;
+
+
+             //  break Statement 
+             
+        // break statement loop ko rok deyta hai 
+        // etc (if==3) { break } ho jaaaye ga           
+
+                //     Examples 
+               let text = ""
+                for (let i = 0; i < 10; i++) {
+        if (i == 3) {
+            // text += "The number is " + i + "<br>";
+            break;
+        }
+        
+        text += "The number is " + i + "<br>";
+      }
+      document.querySelector(".para").innerHTML = text;
+
+
+    </script>
+  </body>
+</html>
